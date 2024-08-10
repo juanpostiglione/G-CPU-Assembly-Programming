@@ -1,0 +1,30 @@
+ORG $0C73 ; ROM Address
+DC.B $7F, $13, $3, $2, $4, $6, $8, $9, $A ;Input Table
+ORG 0
+LDX #$0C73 ;Pointer to Input Table
+LDY $0C73 ;Pointer to Output Table ($137F)
+LDAA 2,X ;Load A with table size
+STAA $1000 ;Store table size value in address in RAM
+LOOP LDAA 3,X ; Load first value of the pair
+COMA ;Complement value
+LDAB 4,X ;Load second value of the pair
+AND_AB ;Make an AND and store result in B
+STAB $1100 ;Store contents in B in some RAM Addr
+LDAA 3,X ;Load first value ofthe pair
+LDAB 4,X ;Load second value of the pair
+COMB ;Comlement B
+AND_AB ;Make an AND an store it in B
+STAB $1101 ;Contents of B go to some RAM Addr
+LDAA $1100 ;Load A with result of first AND
+LDAB $1101 ;Load B with result of second AND
+OR_AB ;Make an OR to obtain the XOR and store in B
+STAB 0,Y ;Store contents of B in Addr pointed by Y
+LDAA $1000 ;Load table size value to A
+LDAB #$FF ;Load B with -1
+SUM_BA ;Sum A and B and store it in A
+STAA $1000 ;Store the new table size in A
+INX ;Increment X (Go to the next pair number)
+INX ;Increment X (Go to the next pair number)
+INY ;Increment Y (Next Address in Output Table)
+BNE LOOP ;Branch if A is not 0
+END BN END ;ENDLESS LOOP
