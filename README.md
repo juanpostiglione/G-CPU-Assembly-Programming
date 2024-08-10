@@ -39,3 +39,11 @@ The main task was to write an assembly program to XOR pairs of numbers and store
 - **G-IDE Version:** G-IDE-Full-v1.4
 - **Hardware:** DE-10 Lite FPGA Board
 - **Software:** Quartus Prime Lite Edition
+
+## Future Work
+
+This project provided a solid foundation in assembly programming and insights into the workings of the G-CPU. Future applications could include developing custom instructions for the G-CPU and exploring hardware programming for microprocessors.
+
+## Video Demonstration
+
+A video demonstration of the project can be found [here](https://www.dropbox.com/scl/fi/80w5dubgb4jt8yq5nul4a/IMG_0129.MOV?rlkey=5pht6qq1d4gmpx7kdccq0dhyi&st=klr0f9kz&dl=0).
