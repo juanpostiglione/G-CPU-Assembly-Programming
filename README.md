@@ -28,6 +28,8 @@ The main task was to write an assembly program to XOR pairs of numbers and store
 
 - The program was hand-assembled, and the results were compared with the G-IDE generated code to ensure accuracy.
 - The `list` file included addresses, opcodes, assembly language instructions, and comments for each instruction.
+<img width="649" alt="Hand Assembly Program" src="https://github.com/user-attachments/assets/c13bae18-2721-4d7e-b6d5-64f836560c1e">
+
 
 ### Simulation and Verification
 
